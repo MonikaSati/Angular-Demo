@@ -1,0 +1,25 @@
+<div>
+     <p>{{isdeletedMessage}}</p>
+    <table class="table">
+
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Color</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let prd of product">
+            <td>{{prd.name}}</td>
+            <td>{{prd.price}}</td>
+            <td>{{prd.description}}</td>
+            <td>{{prd.color}}</td>
+            <td><img [src]="prd.imageurl" /></td>
+           <td><fa-icon [icon]="deleteicon" (click)="delete(prd.id)" class="icon"></fa-icon>
+           <a routerLink='/seller-productEdit/{{prd.id}}' > <fa-icon [icon]="updateicon"  class="icon"></fa-icon></a></td>
+     
+        
+        </tr>
+    </table>
+</div>

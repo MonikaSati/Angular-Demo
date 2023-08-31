@@ -1,0 +1,23 @@
+<nav class="nav">
+    <h1><a href=" ">Ecommerce</a></h1>
+    <div class="nav-search" *ngIf="sellermenu=='default'">
+        <input type="text"/>
+  
+            <button>Serach</button>
+   
+       
+    </div>
+    <div [ngSwitch]="sellermenu">
+        <ul *ngSwitchCase="'default'">
+            <li><a href=" ">Home</a></li>
+            <li><a href="seller">Seller</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+        <ul *ngSwitchCase="'menuseller'">
+            <li><a href=" seller-productlist" >ProductList</a></li>
+            <li><a class="atag" (click)="authsellerprodut()">AddProduct</a></li>
+            <li><a href=" " (click)="logout()">Logout</a></li>
+            <li><a href=" ">{{sellername}}</a></li>
+        </ul>
+    </div>
+<nav>

@@ -1,0 +1,23 @@
+th{
+    
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px; 
+    text-align: left;
+
+}
+tr {
+    background-color:lightskyblue;
+}
+td {
+    border: 1px solid #ddd;
+    
+}
+img{
+     height: 100px;
+     width: 100px;
+}
+.icon{
+    cursor: pointer;
+    margin-left: 10px;
+}

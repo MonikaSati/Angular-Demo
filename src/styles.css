@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.common-form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+}
+.common-input-form{
+    border: 1px solid blueviolet;
+    margin-bottom: 15px;
+    height: 30px;
+    text-decoration-color: blueviolet;
+}
+.btn{
+    height: 30px;
+    color: blueviolet;
+    
+}
+.table{
+     width: 80%; 
+    /* border-collapse: collapse; */
+    margin-bottom: 20px;
+}

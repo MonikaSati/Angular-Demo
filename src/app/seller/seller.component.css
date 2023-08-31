@@ -1,0 +1,17 @@
+.seller-login-heading{
+    
+
+    text-align: center;
+    color: red;
+}
+.clicklogin{
+    color:blueviolet;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.loginfailed{
+    text-align: center;
+    color: red;
+}
