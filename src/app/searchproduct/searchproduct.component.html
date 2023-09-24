@@ -1,0 +1,22 @@
+
+
+<ng-templet *ngIf="searchedproduct">
+    <div class="row product-item" *ngFor="let prd of searchedproduct">
+        <div class="col-sm-3" >
+            <a routerLink='/Productdetail/{{prd.id}}'>
+                <img [src]="prd.imageurl">
+            </a>
+      
+    
+        </div>
+        <div class="col-sm-8 detail">
+            <h6>Name :{{prd.name}}</h6>
+            <h6>color : {{prd.color}}</h6>
+            <h6><b>Price : {{prd.price}}</b></h6>
+        </div>
+    </div>
+    
+</ng-templet>
+<div>
+    <p class="noproductmsg">{{noproductfound}}</p>
+</div>

@@ -7,6 +7,11 @@ import { AuthGuard } from './auth.guard';
 import { ProductComponent } from './product/product.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { SearchproductComponent } from './searchproduct/searchproduct.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { UserComponent } from './user/user.component';
+import { CartDetailComponent } from './cart-detail/cart-detail.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,12 +28,34 @@ const routes: Routes = [
   },
   {
     component:ProductlistComponent,
-    path:"seller-productlist"
+    path:"seller-productlist",
+    canActivate:[AuthGuard]
    
   },
   {
     component: ProductEditComponent,
     path:'seller-productEdit/:id'
+  },
+  {
+    component: SearchproductComponent,
+    path:'productsearch/:query'
+  },
+  {
+    component: ProductDetailComponent,
+    path: 'Productdetail/:id'
+  },
+  {
+    component: UserComponent,
+    path: 'user-signup'
+  },
+  {
+    component: CartDetailComponent,
+    path: 'cart-detail'
+  },
+  {
+    component: CheckoutComponent,
+    path:'checkout',
+    
   }
 ];
 

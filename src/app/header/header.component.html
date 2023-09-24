@@ -1,23 +1,35 @@
 <nav class="nav">
     <h1><a href=" ">Ecommerce</a></h1>
-    <div class="nav-search" *ngIf="sellermenu=='default'">
-        <input type="text"/>
-  
-            <button>Serach</button>
-   
-       
+    <div class="nav-search" *ngIf="(sellermenu=='default') || (sellermenu=='usermenu')">
+        <input type="text" #searchtext (input)="searchinput($event)" (blur)="hidesearchlist()"/>
+        <ul *ngIf="searchprodut">
+            <li *ngFor="let search of searchprodut">
+                <a (mousedown)="listclick(search.id)">{{search.name}}</a>
+            </li>
+        </ul>
+        <button (click)="searchbtnclicked(searchtext.value)">Serach</button>
+
+
     </div>
     <div [ngSwitch]="sellermenu">
         <ul *ngSwitchCase="'default'">
             <li><a href=" ">Home</a></li>
+            <li><a routerLink="user-signup">Login/SignUp</a></li>
             <li><a href="seller">Seller</a></li>
+            <li><a routerLink="cart-detail">Cart({{cartitem}}) </a></li>
             <li><a href="">About</a></li>
         </ul>
         <ul *ngSwitchCase="'menuseller'">
-            <li><a href=" seller-productlist" >ProductList</a></li>
+            <li><a routerLink="seller-productlist">ProductList</a></li>
             <li><a class="atag" (click)="authsellerprodut()">AddProduct</a></li>
             <li><a href=" " (click)="logout()">Logout</a></li>
             <li><a href=" ">{{sellername}}</a></li>
         </ul>
+        <ul *ngSwitchCase="'usermenu'">
+            <li><a routerLink="cart-detail">Cart({{cartitem}})</a></li>
+            <li><a class="atag" ></a>UserDetail</li>
+            <li><a href=" " (click)="usrlogout()">Logout</a></li>
+            <li><a href=" ">{{username}}</a></li>
+        </ul>
     </div>
-<nav>
+    <nav>

@@ -16,7 +16,7 @@ export class SellerService {
       .subscribe((result) => {
         this.isloggesdIn.next(true);
         localStorage.setItem('seller', JSON.stringify(result.body));
-        this.route.navigate(['sellerpage']);
+        this.route.navigate(['seller-productlist']);
 
       });
 
@@ -32,7 +32,7 @@ export class SellerService {
       if(result && result.body && result.body.length) {
         this.isloggesdIn.next(true);
         localStorage.setItem('seller', JSON.stringify(result.body));
-        this.route.navigate(['sellerpage']);
+        this.route.navigate(['seller-productlist']);
       }
        else {
         this.isError.emit(true);
@@ -43,7 +43,7 @@ export class SellerService {
   reloadSeller() {
     if (localStorage.getItem('seller')) {
       this.isloggesdIn.next(true);
-      this.route.navigate(['sellerpage']);
+      this.route.navigate(['seller-productlist']);
     }
   }
 }

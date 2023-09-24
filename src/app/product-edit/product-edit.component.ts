@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { Product } from '../dtattype';
 
@@ -9,7 +9,7 @@ import { Product } from '../dtattype';
   styleUrls: ['./product-edit.component.css']
 })
 export class ProductEditComponent {
-  constructor(private route: ActivatedRoute, private product: ProductService) { }
+  constructor(private route: ActivatedRoute, private product: ProductService, private routing: Router) { }
   productdetail: undefined | Product
   updatemessage: undefined | string;
   ngOnInit() {
@@ -30,8 +30,11 @@ export class ProductEditComponent {
       }
       setTimeout(() => {
         this.updatemessage=undefined;
+        this.routing.navigate(['seller-productlist'])
       }, 3000);
+   
     })
+   
   }
 
 }

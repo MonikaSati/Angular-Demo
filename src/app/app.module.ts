@@ -13,6 +13,12 @@ import { ProductComponent } from './product/product.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchproductComponent } from './searchproduct/searchproduct.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { UserComponent } from './user/user.component';
+import { CartDetailComponent } from './cart-detail/cart-detail.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,12 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     SellerpageComponent,
     ProductComponent,
     ProductlistComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    SearchproductComponent,
+    ProductDetailComponent,
+    UserComponent,
+    CartDetailComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +41,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
  HttpClientModule,
     FormsModule,
     FontAwesomeModule,
+    NgbModule,
    
   ],
   providers: [],

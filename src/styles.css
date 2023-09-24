@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+
+
 .common-form{
     margin: auto;
     display: flex;
@@ -12,13 +19,27 @@
     height: 30px;
     text-decoration-color: blueviolet;
 }
-.btn{
+.lgbtn{
     height: 30px;
     color: blueviolet;
+    width: 200px;
     
 }
 .table{
      width: 80%; 
     /* border-collapse: collapse; */
     margin-bottom: 20px;
+}
+.carousel-caption{
+        background-color: #0000006b;;
+        width:600px;
+        border-radius: 10px;
+        transition: background-color is ease;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: black;
+    border-radius: 5px;
+
+
 }

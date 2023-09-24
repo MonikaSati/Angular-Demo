@@ -1,0 +1,28 @@
+.product-item{
+    margin: 25px auto;
+    width: 700px;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+ .detail{
+    padding: 50px ;
+    margin-left: 30px;
+    text-align: left;
+}
+ 
+
+.product-item img{
+    border: 1px solid  #ddd;
+    height:250px;
+    width: 200px
+}
+.noproductmsg{
+    margin-top: 20px;
+   margin-left: 150px;
+   padding-left: 80px;
+    border: 1px solid #ddd;
+    color: Red;
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+}

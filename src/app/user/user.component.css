@@ -1,0 +1,52 @@
+.usersignup{
+ 
+margin: 20px;
+text-align: center;
+padding: 60px;
+color: blueviolet;
+height: 100%;
+width: 100%;
+border: 1px solid black;
+background-repeat: no-repeat;
+}
+.usersignup h1{
+    padding: 10px;
+    text-align: center;
+}
+.usersignup h3{
+    color: red;
+}
+.inputform{
+    
+ 
+    background-color: transparent;
+    color: black;
+margin-bottom: 10px;
+    height: 40px;
+    padding: 2px;
+    width: 300px;
+}
+.userform p{
+margin: 0%;
+padding: 0%;
+height: 0%;
+color: red;
+text-align: left;
+}
+button:disabled{
+    cursor: not-allowed;
+}
+ .userform{
+ 
+    box-shadow: 0 0 50px 15px white;
+    margin: auto 400px;
+    width: 300px;
+    text-align: center;
+display: flex;
+flex-direction: column;
+
+}
+.anchorsign{
+    color: blueviolet;
+    cursor: pointer;
+}

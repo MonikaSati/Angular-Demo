@@ -24,10 +24,31 @@
     margin-top: 5px;
    
 }
+.nav .nav-search ul{
+    display: list-item;
+    position: absolute;
+    margin-top: 20px;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid white;
+    top: 25px;
+    width:300px;
+
+
+}
+.nav .nav-search li{
+border: 1px solid #ddd;
+padding: 5px;
+}
+.nav .nav-search li a{
+    cursor: pointer;
+    color: blueviolet;
+
+}
 .nav .nav-search button{
     border:1px solid blueviolet ;
     border-left: 0px;
-    height:39px;
+    height:35px;
     margin-top: 5px;
    
 }

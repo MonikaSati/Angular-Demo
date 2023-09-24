@@ -1,0 +1,37 @@
+.picsum-img-wrapper img{
+    object-fit: contain;
+    height:500px;
+    width: 95%;
+}
+.product-wrapper{
+    
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.product-item{
+ 
+    border: 1px solid #ddd;
+    margin-right: 25px;
+    
+}
+
+
+.product-item img{
+    width:200px;
+    object-fit: contain;
+    padding: 10px;
+   
+}
+.product-details{
+    text-align: center;
+}
+.product-details .product-name{
+    font-size: larger;
+    font-weight: 700;
+}
+
+.produt-action{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}

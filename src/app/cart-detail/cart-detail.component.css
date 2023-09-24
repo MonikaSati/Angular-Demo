@@ -1,0 +1,52 @@
+.cart-detail{
+    margin-top: 20px;
+margin-bottom: 30px;
+}
+.cart-detail h1{
+    text-align: center;
+}
+.detail img{
+    height:150px;
+}
+.detail{
+    border: 1px solid #ddd;
+}
+.detail ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    align-items: center;
+   
+}
+.detail li{
+    text-align: center;
+}
+.summary ul{
+    list-style-type: none;
+    text-align: center;
+    border: 1px solid #ddd;
+padding: 10px;
+
+}
+.summary li{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+.summary h2{
+    text-align: center;
+}
+.checkbtn{
+    height:40px
+}
+.loginfirst{
+    font-size:x-large;
+    font-weight: bold;
+    color: red;
+    text-decoration: solid;
+}

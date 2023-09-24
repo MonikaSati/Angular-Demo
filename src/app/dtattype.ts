@@ -13,5 +13,34 @@ export interface Product{
     price: number;
     color: string;
     description: string;
-    imageurl: string
+    imageurl: string;
+    quantity: undefined | number;
+    productId: undefined | number
+}
+export interface User{
+    email:string;
+    password:string
+}
+export interface UserSign{
+    name: string;
+    email:string;
+    password:string
+}
+export interface cart{
+    productId: number;
+    name:string;
+    price: number;
+  id ?: number;
+    color: string;
+    description: string;
+    imageurl: string;
+    quantity: undefined | number;
+    userId: number
+}
+export interface cartsummary{
+    amount: number;
+    tax: number;
+    discount: number;
+    total: number;
+    deliverycharge: number
 }

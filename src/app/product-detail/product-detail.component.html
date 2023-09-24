@@ -1,0 +1,29 @@
+<div class="row" *ngIf="productDetail">
+
+    <div class="col-sm-6">
+        <img [src]="productDetail.imageurl" alt="Random first slide"  class="prdimage"/>
+    </div>
+    <div class="col-sm-6 detail">
+        <h1 class="">{{productDetail.name}}</h1>
+        <h3>Price : {{ productDetail.price}} </h3>
+        <div>
+            Color:<h6 [style.backgroundColor]="productDetail.color" class="colorclass"></h6>
+        </div>
+       
+        <h6>Description :{{productDetail.description}}</h6>
+        <div><button class="cartbtn" (click)="addtocart()" *ngIf="!removetocart">Add To Cart</button>
+            <button class="removebtn" (click)="RemoveTocart()" *ngIf="removetocart">Remove To Cart</button>
+             <button class="cartbtn">Buy Now</button>
+        </div>
+        <div class="prdquantity">
+            <button (click)="addprd()" >+ </button>
+            <input [value]="productquantity">
+         
+            <button (click)="subprd()"> -</button>
+        </div>
+        
+    </div>
+</div>
+
+
+    

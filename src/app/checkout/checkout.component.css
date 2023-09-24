@@ -1,0 +1,26 @@
+.usersignup{
+
+ margin-top: 40px;
+
+    }
+    .usersignup h1{
+        text-align: center;
+    }
+    .address{
+       
+
+    padding-top: 30px;
+        text-align: center;
+    }
+    .usersignup h3{
+        padding-bottom: 20px;
+        text-align: center;
+    
+    }
+    .addinput{
+        height:40px
+    }
+    .adressbtn{
+        height: 40px;
+        
+    }
