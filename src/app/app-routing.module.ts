@@ -12,8 +12,10 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { UserComponent } from './user/user.component';
 import { CartDetailComponent } from './cart-detail/cart-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { CatogeryComponent } from './catogery/catogery.component';
 
 const routes: Routes = [
+  { path: "Catogery", component: CatogeryComponent},
   { path: '', component: HomeComponent },
   { path: 'seller', component: SellerComponent },
   {

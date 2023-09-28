@@ -2,6 +2,8 @@
     <h1>Add Products</h1>
     <h2>{{addproductMessage}}</h2>
     <form class="common-form" #addproductform="ngForm" (ngSubmit)="addproduct(addproductform.value)">
+        <select  class="common-input-form" name="selectedvalue" ngModel >
+            <option *ngFor="let cat of catogery" >{{cat.name}}</option></select>
         <input  class="common-input-form" type="text" placeholder="enter-product-name" ngModel name="name">
         <input  class="common-input-form" type="text" placeholder="enter-product-price" ngModel name="price">
         <input  class="common-input-form" type="text" placeholder="enter-product-color" ngModel name="color">

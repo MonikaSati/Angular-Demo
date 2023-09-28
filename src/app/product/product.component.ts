@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Product } from '../dtattype';
+import { Catogery, Product } from '../dtattype';
 import { ProductService } from '../services/product.service';
+import { CatogeryService } from '../services/catogery.service';
 
 @Component({
   selector: 'product',
@@ -9,9 +10,15 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductComponent {
 addproductMessage: string="";
-constructor( private productservice: ProductService){
+catogery: Catogery[]| undefined
+constructor( private productservice: ProductService, private catservice: CatogeryService){}
 
+ngOnInit(){
+this.catservice.getCat().subscribe((data)=>{
+this.catogery= data
+})
 }
+
   addproduct(data: Product){
 
 this.productservice.AddProductS(data).subscribe((result)=>{

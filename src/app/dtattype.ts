@@ -7,8 +7,13 @@ export interface SellerLoginI{
     email:string;
     password:string
 } 
+export interface Catogery{
+    id: number;
+    name: string;
+}
 export interface Product{
     id: number;
+    //catogeryId:number;
     name:string;
     price: number;
     color: string;

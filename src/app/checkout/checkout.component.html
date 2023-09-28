@@ -3,10 +3,10 @@
     <div class="col-sm-7 address">
         <h3>Add Shipping Address</h3>
     <form class="common-form " #orderdata="ngForm">
-<input class="common-input-form addinput" type="email" name="email" placeholder="enter your email"/>
-<textarea class="common-input-form addinput" type="text" name="address" placeholder="enter your address"></textarea>
-<input class="common-input-form addinput" type="number" name="contact" placeholder="enter contact detail"/>
-<button class="lgbtn adressbtn">Oredr Now</button>    
+<input class="common-input-form addinput" type="email" name="email" placeholder="enter your email" ngModel #email="ngModel" required/>
+<textarea class="common-input-form addinput" type="text" name="address" placeholder="enter your address" ngModel required></textarea>
+<input class="common-input-form addinput" type="number" name="contact" placeholder="enter contact detail" ngModel required/>
+<button class="lgbtn adressbtn" (click)="order()" [disabled]="orderdata.invalid">Oredr Now</button>    
 </form>
     </div>
     <div class="col-sm-5 address">

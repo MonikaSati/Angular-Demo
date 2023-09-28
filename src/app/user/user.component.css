@@ -6,8 +6,10 @@ padding: 60px;
 color: blueviolet;
 height: 100%;
 width: 100%;
+background: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg");
 border: 1px solid black;
 background-repeat: no-repeat;
+background-size: cover;
 }
 .usersignup h1{
     padding: 10px;

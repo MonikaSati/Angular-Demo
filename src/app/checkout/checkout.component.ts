@@ -11,10 +11,11 @@ import { CartDetailComponent } from '../cart-detail/cart-detail.component';
 export class CheckoutComponent {
 constructor(private product: ProductService ){}
 totalamount:number= 0;
-
+email: string| undefined;
 ngOnInit(){
   let userinfo = localStorage.getItem('user');
-  let userdata = userinfo && JSON.parse(userinfo)[0];
+  let userdata = userinfo && JSON.parse(userinfo);
+  console.log(userdata)
   this.product.getcartproduct(userdata.id)
   this.product.updatecart.subscribe((data)=>{
     if(data){
@@ -25,10 +26,19 @@ ngOnInit(){
       }
 
     })
-  this.totalamount= price  + 100
+    if(data.length>0){
+      this.totalamount= price  + 100
+    }else{
+      this.totalamount=price
+    }
+
     }
    
   })
 
+}
+order(){
+  alert("Your Order Has Been Placed")
+  
 }
 }

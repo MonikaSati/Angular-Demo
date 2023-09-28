@@ -40,7 +40,13 @@ export class CartDetailComponent {
         this.cartsummary.amount = price;
         this.cartsummary.tax = price / 10;
         this.cartsummary.discount = price / 10;
-        this.cartsummary.deliverycharge = 100;
+        if(this.cartiteam)
+        {
+          this.cartsummary.deliverycharge = 100;
+        }else{
+          this.cartsummary.deliverycharge = 0;
+        }
+       
         this.cartsummary.total = this.cartsummary.amount + this.cartsummary.deliverycharge +
           this.cartsummary.tax - this.cartsummary.discount;
 
@@ -73,7 +79,13 @@ export class CartDetailComponent {
         this.cartsummary.amount = price;
         this.cartsummary.tax = price / 10;
         this.cartsummary.discount = price / 10;
-        this.cartsummary.deliverycharge = 100;
+        if(this.cartiteam.length  > 0){
+        
+          this.cartsummary.deliverycharge = 100;
+        }else{
+          this.cartsummary.deliverycharge = 0;
+        }
+       
         this.cartsummary.total = this.cartsummary.amount + this.cartsummary.deliverycharge +
           this.cartsummary.tax - this.cartsummary.discount;
 
@@ -106,6 +118,7 @@ export class CartDetailComponent {
       this.product.deleteproductfromcart(id).subscribe((result) => {
         if (result) {
           this.product.getcartproduct(userId)
+        
         }
       })
     }

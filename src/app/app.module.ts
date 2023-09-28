@@ -19,6 +19,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { UserComponent } from './user/user.component';
 import { CartDetailComponent } from './cart-detail/cart-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { CatogeryComponent } from './catogery/catogery.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ProductDetailComponent,
     UserComponent,
     CartDetailComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    CatogeryComponent
   ],
   imports: [
     BrowserModule,

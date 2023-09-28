@@ -1,0 +1,9 @@
+<div>
+    <h1>Catogery</h1>
+    <div>
+        <form (ngSubmit)="addcat(catform.value)" #catform="ngForm">
+            <input type="text" name="name" ngModel/>
+            <input type="submit" value="Add"/>
+        </form>
+    </div>
+</div>
